@@ -1,0 +1,227 @@
+@font-face {
+  font-family: HankenGrotesk;
+  src: url(/fonts/HankenGrotesk-VariableFont_wght.ttf);
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+:root {
+  --width-mobile: 375px;
+  --width-desktop: 1440px;
+
+  /*  Colors */
+
+  /*  Primary */
+
+  --Light-red: 0, 100%, 67%;
+  --Orangey-yellow: 39, 100%, 56%;
+  --Green-teal: 166, 100%, 37%;
+  --Cobalt-blue: 234, 85%, 45%;
+
+  /* Gradients */
+
+  --Light-slate-blue-background: hsl(252, 100%, 67%);
+  --Light-royal-blue-background: hsl(241, 81%, 54%);
+
+  --Violet-blue-circle: hsla(256, 72%, 46%, 1);
+  --Persian-blue-circle: hsla(241, 72%, 46%, 0);
+
+  /* Neutral */
+
+  --White: hsl(0, 0%, 100%);
+  --Pale-blue: hsl(221, 100%, 96%);
+  --Light-lavender: hsl(241, 100%, 89%);
+  --Dark-gray-blue: 224, 30%, 27%;
+
+  font-family: HankenGrotesk;
+  font-size: 18px;
+}
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app {
+  background-color: white;
+  max-width: 800px;
+  border-radius: 1.5rem;
+  box-shadow: 0px 30px 30px hsla(0, 0%, 0%, 0.103);
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.card {
+  background-image: linear-gradient(
+    var(--Light-slate-blue-background),
+    var(--Light-royal-blue-background)
+  );
+  border-radius: 1.5rem;
+  padding: 2rem;
+  text-align: center;
+  color: var(--Light-lavender);
+  display: grid;
+  gap: 1rem;
+}
+
+.card h3 {
+  color: white;
+  font-size: 28px;
+}
+.card h2 {
+  font-size: 20px;
+}
+
+.scoreWrapper {
+  background-image: linear-gradient(
+    var(--Violet-blue-circle),
+    var(--Persian-blue-circle)
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 50%;
+  margin: 1rem 10%;
+  aspect-ratio: 1;
+}
+
+.scoreWrapper > span:nth-child(1) {
+  color: white;
+  font-size: 72px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.summary {
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.summary h2 {
+  font-size: 22px;
+}
+
+.summaryObjects {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.summaryObj {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  border-radius: 10px;
+  font-weight: 700;
+}
+
+.summaryObj.Reaction {
+  background-color: hsla(var(--Light-red), 0.05);
+}
+.summaryObj.Reaction > div:first-child {
+  color: hsl(var(--Light-red));
+}
+.summaryObj.Memory {
+  background-color: hsla(var(--Orangey-yellow), 0.05);
+}
+.summaryObj.Memory > div:first-child {
+  color: hsl(var(--Orangey-yellow));
+}
+.summaryObj.Verbal {
+  background-color: hsla(var(--Green-teal), 0.05);
+}
+.summaryObj.Verbal > div:first-child {
+  color: hsl(var(--Green-teal));
+}
+.summaryObj.Visual {
+  background-color: hsla(var(--Cobalt-blue), 0.05);
+}
+.summaryObj.Visual > div:first-child {
+  color: hsl(var(--Cobalt-blue));
+}
+
+.summaryObj > div:nth-child(1) {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.summaryObjScore {
+  color: hsl(var(--Dark-gray-blue));
+  font-weight: 800;
+}
+
+.summaryObjMax {
+  color: hsla(var(--Dark-gray-blue), 0.5);
+  font-weight: 800;
+}
+
+.summary button {
+  background-color: hsl(var(--Dark-gray-blue));
+  color: white;
+  border-radius: 100px;
+  font-weight: 700;
+  font-size: 18px;
+  border: none;
+}
+
+.summary button:hover,
+.summary button:focus-visible {
+  background-image: linear-gradient(
+    var(--Light-slate-blue-background),
+    var(--Light-royal-blue-background)
+  );
+  outline: none;
+}
+
+@media screen and (max-width: 600px) {
+  .app {
+    min-width: 275px;
+    border-radius: 0;
+    box-shadow: none;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr max-content;
+    height: 100vh;
+  }
+  .card {
+    border-radius: 0 0 1.5rem 1.5rem;
+    padding: 1rem;
+    gap: 0.7rem;
+  }
+  .scoreWrapper {
+    margin: 1rem 30%;
+  }
+  .scoreWrapper > span:nth-child(1) {
+    font-size: clamp(32px, 20vw, 72px);
+  }
+
+  .summary {
+    gap: 2rem;
+  }
+
+  .summaryObj > div:nth-child(1) {
+    font-size: 16px;
+    font-weight: 500;
+    gap: 5px;
+  }
+
+  .summary button {
+    padding: 15px;
+  }
+}
