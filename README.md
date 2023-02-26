@@ -30,8 +30,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [/www.frontendmentor.io](https://www.frontendmentor.io/solutions/results-summary-component-react-ts-j3yRoSm7aE)
+- Live Site URL: [www.results-summary-component-main-bqy.pages.dev](https://results-summary-component-main-bqy.pages.dev/)
 
 ## My process
 
