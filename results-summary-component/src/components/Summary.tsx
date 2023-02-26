@@ -1,14 +1,12 @@
-import Reaction from "../assets/images/icon-Reaction.svg";
-import Memory from "../assets/images/icon-Memory.svg";
-import Verbal from "../assets/images/icon-Verbal.svg";
-import Visual from "../assets/images/icon-Visual.svg";
 import { summaryInterface } from "../types";
 
+import { Reaction, Memory, Verbal, Visual } from "../assets/images/icons";
+
 const icons: any = {
-  Reaction: Reaction,
-  Memory: Memory,
-  Verbal: Verbal,
-  Visual: Visual,
+  Reaction: <Reaction />,
+  Memory: <Memory />,
+  Verbal: <Verbal />,
+  Visual: <Visual />,
 };
 
 export const Summary = ({ data }: summaryInterface) => {
@@ -22,7 +20,8 @@ export const Summary = ({ data }: summaryInterface) => {
             className={`summaryObj ${summaryObj.category}`}
           >
             <div>
-              <img src={icons[summaryObj.category]} className="icon"></img>
+              {/* <img src={icons[summaryObj.category]} className="icon"></img> */}
+              {icons[summaryObj.category]}
               <span className="summaryObjName">{summaryObj.category}</span>
             </div>
             <div>
