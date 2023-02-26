@@ -25,8 +25,8 @@ Users should be able to:
 
 ### Screenshot
 
-![](./Screenshots\Results-summary-component-desktop.png)
-![](./Screenshots\Results-summary-component-mobile.png)
+![](./Screenshots/Results-summary-component-desktop.png)
+![](./Screenshots/Results-summary-component-mobile.png)
 
 ### Links
 
